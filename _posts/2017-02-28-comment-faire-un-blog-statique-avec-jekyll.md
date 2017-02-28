@@ -5,7 +5,7 @@ title: Comment faire un blog statique avec Jekyll
 date: 2017-02-28 17:23
 author: P. Skowron
 toc: true
-thumbnail: jekyll_github.jpg
+thumbnail: jekyll_github.png
 ---
 
 
