@@ -7,3 +7,55 @@
         </div>
     </div>
 </footer>
+
+
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1247828545302060',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+   (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8&appId=432976063704969";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Twitter -->
+<script>
+   window.twttr = (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0],
+       t = window.twttr || {};
+     if (d.getElementById(id)) return t;
+     js = d.createElement(s);
+     js.id = id;
+     js.src = "https://platform.twitter.com/widgets.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   
+     t._e = [];
+     t.ready = function(f) {
+       t._e.push(f);
+     };
+   
+     return t;
+   }(document, "script", "twitter-wjs"));
+</script>
+
+<!-- SnapWidget -->
+<script async src="https://snapwidget.com/js/snapwidget.js"></script>
+
+<!-- Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
+<script async src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
