@@ -1,0 +1,75 @@
+<nav class="navbar navbar-default main-menu">
+    <div class="container">
+        <div class="menu-content">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav text-uppercase">
+                    {% for page in site.pages %}
+                        {% if page.title and page.navbar %}
+                        <li>
+                            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                
+                <ul class="hidden-xs nav navbar-nav navbar-nav-media pull-right">
+                    {% if site.media_twitter %}
+                    <li>
+                        <a href="https://twitter.com/{{site.media_twitter}}" target="_blank">
+                            <i class="fa fa-lg fa-twitter"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.media_facebook %}
+                    <li>
+                        <a href="https://www.facebook.com/{{site.media_facebook}}" target="_blank">
+                            <i class="fa fa-lg fa-facebook"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.media_instagram %}
+                    <li>
+                        <a href="https://www.instagram.com/{{site.media_instagram}}" target="_blank">
+                            <i class="fa fa-lg fa-instagram"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.media_linkedin %}
+                    <li>
+                        <a href="https://www.linkedin.com/in/{{site.media_linkedin}}" target="_blank">
+                            <i class="fa fa-lg fa-linkedin"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.media_github %}
+                    <li>
+                        <a href="https://github.com/{{site.media_github}}" target="_blank">
+                            <i class="fa fa-lg fa-github"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.media_stackoverflow %}
+                    <li>
+                        <a href="http://stackoverflow.com/users/{{site.media_stackoverflow}}" target="_blank">
+                            <i class="fa fa-lg fa-stack-exchange"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</nav>

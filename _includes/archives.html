@@ -1,0 +1,23 @@
+<aside class="widget">
+    <h3 class="text-center text-uppercase">Catégories</h3>
+    
+    {% capture categories %}
+        {% for category in site.categories %}
+            {{ category | first }}
+        {% endfor %}
+    {% endcapture %}
+    {% assign sorted_categories = categories | split: ' ' | sort %}
+    
+    {% if sorted_categories %}
+    <ul class="text-uppercase">
+        {% for category in sorted_categories %}
+            {% capture category_name %}{{ category | replace: '-', ' ' }}{% endcapture %}
+            
+            <li class="clearfix">
+                <a href="/categories/{{ category_name | slugify }}/">{{ category_name }}</a>
+                <span class="pull-right">({{ site.categories[category] | size }})</span>
+            </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</aside>

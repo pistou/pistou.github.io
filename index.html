@@ -1,0 +1,103 @@
+---
+layout: page
+title: Accueil
+navbar: yes
+---
+
+
+{% for post in paginator.posts %}
+{% assign isFirst = forloop.first %}
+<article class="{% if isFirst %}post-big{% else %}post-list{% endif %}">
+    <div class="row">
+        
+        {% if post.thumbnail %}
+        <div class="{% if isFirst %}col-xs-12{% else %}col-md-6{% endif %}">
+            {% if post.thumbnail %}
+            <div class="post-thumbnail clearfix">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="{{ site.baseurl }}/imgs/posts/{{ post.url }}/{{ post.thumbnail }}" alt="{{ post.title }}" />
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <div class="overlay">
+                            <h2>
+                                Voir l'article
+                            </h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="{% if isFirst %}col-xs-12{% else %}{% if post.thumbnail %}col-md-6{% else %}col-xs-12{% endif %}{% endif %}">
+            <div class="post-content clearfix">
+                
+                <header class="entry-header text-uppercase">
+                    <h1 class="entry-title">
+                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h1>
+                </header>
+                
+                <div class="entry-content clearfix">
+                    {{ post.excerpt | strip_html }}
+                    {% if isFirst %}
+                        <div class="read-more text-center text-uppercase">
+                            <a href="{{ post.url | prepend: site.baseurl }}" class="btn-read-more">Lire la suite</a>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="entry-footer clearfix">
+                    <span class="meta-data pull-left">
+                        Par {%if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} le {{ post.date | date: "%d/%m/%Y" }}
+                    </span>
+                    
+                    {% if post.category %}
+                        {% capture category %}{{ post.category | replace: '-', ' ' }}{% endcapture %}
+                        <div class="meta-tags text-uppercase pull-right">
+                            <a class="btn-tag text-left" href="/categories/{{ category | slugify }}/">
+                                <i class="fa fa-tags"></i> {{ category }}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+{% endfor %}
+
+
+
+{% if paginator.total_pages > 1 %}
+<ul class="pagination">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <i class="fa fa-angle-double-left"></i>
+        </a>
+    </li>
+    {% endif %}
+    
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <li class="active"><a>{{ page }}</a></li>
+        {% elsif page == 1 %}
+        <li><a href="{{ '/' | preprend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        {% else %}
+        <li><a href="{{ site.paginate_path | preprend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+    {% endfor %}
+    
+    
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <i class="fa fa-angle-double-right"></i>
+        </a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

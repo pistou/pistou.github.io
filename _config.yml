@@ -1,0 +1,36 @@
+# Site settings
+title: Pistou.io
+header-img: img/header.jpg
+email: skowron.pierre@gmail.com
+#copyright_name: Your/Project/Corporate Name
+description: "Write your site description here. It will be used as your sites meta description as well!"
+baseurl: ""
+url: "https://pistou.github.io"
+
+#email_username:  your-email@yourdomain.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  toc_levels: 1..2
+
+permalink: /:year-:month-:day-:title
+paginate: 5
+paginate_path: "/blog/:num/"
+#exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed, jemoji]
+
+# Assets
+sass:
+    sass_dir: _scss
+    style: compressed
+
+# Social medias
+media_twitter: pistoudev
+media_instagram: pistoudev
+media_github: pistou
+media_linkedin: pierre-skowron-b26546106
+media_stackoverflow: 2099704/pistou
+media_facebook : pistoudev
