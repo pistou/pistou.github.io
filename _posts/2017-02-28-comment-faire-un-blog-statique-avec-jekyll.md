@@ -19,7 +19,7 @@ thumbnail: jekyll_github.jpg
 
 # De quoi s'agit-il ?
 ### Jekyll
-[Jekyll](http://jekyllrb.com) est un générateur de site statiques. Développé en Ruby par [Tom Preston Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner), co-fondateur de [GitHub](https://github.com), ce moteur est aujourd'hui utilisé par [GitHub Pages](pages.github.com) pour générer vos pages.
+[Jekyll](http://jekyllrb.com) est un générateur de sites statiques. Développé en Ruby par [Tom Preston Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner), co-fondateur de [GitHub](https://github.com), ce moteur est aujourd'hui utilisé par [GitHub Pages](pages.github.com) pour générer vos pages.
 
 Le concept est très simple : il suffit de mettre en place quelques templates HTML (grâce à [Liquid](https://shopify.github.io/liquid/)). Il ne vous reste alors plus qu'à rédiger vos articles en [Markdown](https://fr.wikipedia.org/wiki/Markdown) et laisser la magie opérer :dizzy:
 
@@ -35,7 +35,7 @@ Un simple `commit` et le tour est joué !
 
 
 # Configuration et mise en route
-La simplicité étant au coeur de Jekyll, la prise en main est donc assez aisé. Néanmoins, il existe très peu de documentation en français.
+La simplicité étant au coeur de Jekyll, la prise en main est donc assez aisée. Néanmoins, il existe très peu de documentation en français.
 
 Pour mettre en ligne son blog, les étapes à suivre sont les suivantes :
 1. Installer Jekyll
@@ -85,7 +85,7 @@ Pensez à rattacher votre projet à votre dépôt et faire un premier commit :
 ## Configurer son site et ses templates
 
 ### Configuration
-Le fichier de configuration principal se trouve à la racine du dossier : `_config.yml`. Il vous suffira d'ouvrir ce fichier avec votre éediteur favoris et de remplir les champs à votre convenance.
+Le fichier de configuration principal se trouve à la racine du dossier : `_config.yml`. Il vous suffira d'ouvrir ce fichier avec votre éditeur favoris et de remplir les champs à votre convenance.
 
 #### Paramètres du site
 Tous les variables configurées dans la partie *Site settings* seront accessibles via `site.VARIABLE`. **Vous pouvez en ajouter autant que vous le souhaitez.**
@@ -105,14 +105,14 @@ Jekyll se base sur des fichiers HTML, complétés par le langage de template [Li
 #### YAML Front Matter
 Jekyll se sert de [YAML](https://fr.wikipedia.org/wiki/YAML) en en-tête pour toutes les variables au sein d'une page. Ce concept est très important, permettant de passer des variables lors de la génération automatique de votre site.
 
-Pour cela, il suffit de mettre en début de fichier des variables entourés de trois tirets `---`.
+Pour cela, il suffit de mettre en début de fichier des variables entourées de trois tirets `---`.
 Dans les pages de votre site, ces variables seront accessibles via `page.variable`.
 
 #### Templates
 Par défaut, les templates sont stockés dans le dossier `_layouts`.
 
 ##### default.html
-Par convention, on créé un template `default.html` qui sera le modèle de base de toutes nos pages (pages de contenu, articles, etc.). Il va donc contenir la structure HTML.
+Par convention, on crée un template `default.html` qui sera le modèle de base de toutes nos pages (pages de contenu, articles, etc.). Il va donc contenir la structure HTML.
 
 Le mot-clé important ici est `content`. C'est ici que sera placé tout le contenu de vos pages.
 
@@ -170,7 +170,7 @@ Il est très simple de générer son site en local. Pour cela, on retourne dans 
 
 Il vous suffit ensuite de vous rendre à l'adresse [http://localhost:4000](http://localhost:4000) pour visualiser votre site.
 
-Cette commande permet d'installer les éventuelles Gem dont Jekyll aura besoin ainsi que de générer locallement, dans le dossier `_site`, les pages statiques de votre site.
+Cette commande permet d'installer les éventuelles Gem dont Jekyll aura besoin ainsi que de générer localement, dans le dossier `_site`, les pages statiques de votre site.
 
 ## Déployer en ligne
 Comme expliqué au début, GitHub Pages s'occupe de tout ! Il suffit de `commit`.
@@ -195,7 +195,7 @@ La [documentation officielle de Jekyll](https://jekyllrb.com/docs/home/) est vra
 
 Si vous avez des problèmes, il est possible que d'autres les aient eu avant ! N'hésitez pas à chercher sur [Stack Overflow](http://stackoverflow.com/questions/tagged/jekyll)!
 
-De nombreux sites proposent des templates pour Jekyll, qu'ils soient grauits ou payants (liste non-exhaustive) :
+De nombreux sites proposent des templates pour Jekyll, qu'ils soient gratuits ou payants (liste non-exhaustive) :
 - [https://jekyllthemes.io/](https://jekyllthemes.io/)
 - [http://jekyllthemes.org/](http://jekyllthemes.org/)
 - [http://jekyll.tips/templates/](http://jekyll.tips/templates/)
