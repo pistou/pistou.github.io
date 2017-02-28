@@ -1,3 +1,4 @@
 _site
+_DEPRECATED
 .sass-cache
 Gemfile.lock
