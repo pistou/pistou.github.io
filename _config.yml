@@ -4,7 +4,7 @@ header-img: img/header.jpg
 email: skowron.pierre@gmail.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
-url: "https://pistou.github.io"
+url: "http://pistou.io"
 
 # Build settings
 markdown: kramdown
