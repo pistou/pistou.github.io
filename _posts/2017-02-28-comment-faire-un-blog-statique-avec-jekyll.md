@@ -19,7 +19,7 @@ thumbnail: jekyll_github.png
 
 # De quoi s'agit-il ?
 ### Jekyll
-[Jekyll](http://jekyllrb.com) est un générateur de sites statiques. Développé en Ruby par [Tom Preston Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner), co-fondateur de [GitHub](https://github.com), ce moteur est aujourd'hui utilisé par [GitHub Pages](pages.github.com) pour générer vos pages.
+[Jekyll](http://jekyllrb.com) est un générateur de sites statiques. Développé en Ruby par [Tom Preston Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner), co-fondateur de [GitHub](https://github.com), ce moteur est aujourd'hui utilisé par [GitHub Pages](https://pages.github.com) pour générer vos pages.
 
 Le concept est très simple : il suffit de mettre en place quelques templates HTML (grâce à [Liquid](https://shopify.github.io/liquid/)). Il ne vous reste alors plus qu'à rédiger vos articles en [Markdown](https://fr.wikipedia.org/wiki/Markdown) et laisser la magie opérer :dizzy:
 
