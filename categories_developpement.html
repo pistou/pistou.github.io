@@ -13,7 +13,7 @@ permalink: /categories/developpement/
             {% if post.thumbnail %}
             <div class="post-thumbnail clearfix">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="{{ site.url }}/imgs/posts{{ post.url }}/{{ post.thumbnail }}" alt="{{ post.title }}" />
+                    <img class="img-responsive" src="{{ site.baseurl }}/imgs/posts{{ post.url }}/{{ post.thumbnail }}" alt="{{ post.title }}" />
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <div class="overlay">
                             <h2>
