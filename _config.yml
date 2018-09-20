@@ -3,7 +3,7 @@ title: Pistou.io
 email: skowron.pierre@gmail.com
 description: "Blog personnel de Pierre Skowron"
 baseurl: ""
-url: "http://pistou.io"
+url: "https://pistou.github.io"
 
 # Build settings
 markdown: kramdown
@@ -24,8 +24,5 @@ sass:
 
 # Social medias
 media_twitter: pistoudev
-media_instagram: pistoudev
 media_github: pistou
-media_linkedin: pierre-skowron-b26546106
 media_stackoverflow: 2099704/pistou
-media_facebook : pistoudev
